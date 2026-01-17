@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>I Love You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      background: #fff0f5;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #ff4d6d;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 20px;
+      
+    }
+
+    #output {
+      font-size: 16px;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+
+<h2>1000 Reasons Why I Love You</h2>
+<p>Made with love</p>
+
+<button onclick="showLove()">Click me 💗</button>
+
+<div id="output"></div>
+
+  <script>
+  let i = 0;
+  let interval;
+
+  function showLove() {
+    const output = document.getElementById("output");
+    output.innerHTML = ""; // reset teks
+    i = 0;
+
+    interval = setInterval(function () {
+      if (i >= 1000) {
+        clearInterval(interval); // stop pas udah 1000
+        return;
+      }
+
+      output.innerHTML += "i love you andri 💗";
+      i++;
+    }, 5); // 100 ms = makin kecil makin cepet
+  }
+</script>
+
+</body>
+</html>
